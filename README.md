@@ -4,16 +4,22 @@ Gocrx is a simple utility to download chrome extesion .crx file from a list of e
 
 ##Usage
 
-By default gocrx for a `extension.txt` in the directory it is executed in and download the crx in that same directory
-
-###Option
-
-* `--file`: path to the file containing the list of extension
-* `--output`: path to the directory where crx file will be downloaded
-* `--version`: version of chrome the extension will be used with (default: 70.0)
-
-###Example of a extensio.txt:
 ```
-https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp
-https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp
+A tool to download chrome extension .crx files.
+Can read from a file or download by extension id.
+
+Usage:
+  gocrx <file|id> [destination] [flags]
+
+Flags:
+  -c, --chrome string   Chrome version for which extension are downloaded (default "72.0")
+  -h, --help            help for gocrx
+  -w, --worker int      Number of parallel workers (default 4)
+```
+
+
+###Example of a extension.txt:
+```
+privacy-badger: pkehgijcmpdhfbdbbnkijodmdjhbjlgp
+https-everywhere: gcbommkclmclpchllfjekcdonpmejbdp
 ```
